@@ -14,6 +14,7 @@
 #include <linux/page-flags.h>
 #include <asm/cacheflush.h>
 
+#include <linux/set_memory.h>
 #include <linux/device.h>
 #include <linux/fs.h>
 #include <linux/mm.h>
