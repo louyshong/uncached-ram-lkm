@@ -22,9 +22,9 @@ See `test/test.c` for example doing read benchmarks on cached / uncached memory.
 
     # insmod uncached_ram.ko
 
-    # tail /var/log/kern.log
-    Jul 27 20:42:44 localhost kernel: [115315.205744] Uncached ram module loaded
-    Jul 27 20:42:44 localhost kernel: [115315.205764] Created char device, major: 249
+    # dmesg
+    [115315.205744] Uncached ram module loaded
+    [115315.205764] Created char device, major: 249
 
     # cd test
 
@@ -40,7 +40,7 @@ See `test/test.c` for example doing read benchmarks on cached / uncached memory.
     # ./test cached dev
     cached mem test: 104856600 reads in 1.06s                                     (sum: 0)
 
-    # ./test uncached dev
+    # sudo ./test uncached dev
     mmap()'ing dev
     uncached mem test: 104856600 reads in 10.73s                                     (sum: -138595026)
 
